@@ -70,3 +70,14 @@ Antes de executar este projeto, você precisa garantir que tenha as seguintes fe
    pip3 install requests
    openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout key.pem
    ```
+## 🔐 Como Usar
+- Crie seu servidor remoto (se você ainda não tem):
+- Use um servidor VPS barato (DigitalOcean, Linode, ou qualquer provedor com IP público fixo).
+- Execute o servidor Python (server.py) na máquina VPS.
+- Verifique se a porta 443 está aberta para conexões externas.
+- Conecte-se ao servidor:
+- No seu dispositivo local, execute o cliente (client.py).
+- Ele descobrirá automaticamente o IP do servidor remoto e estabelecerá o túnel criptografado.
+- Teste a navegação:
+- No código do cliente, é feito um exemplo de requisição HTTP simples (para www.google.com).
+- O tráfego será redirecionado através do servidor remoto, ocultando seu IP.
